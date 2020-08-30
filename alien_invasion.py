@@ -19,6 +19,7 @@ def run_game():
 
     while True:
         gf.check_events()
+        gf.update_screen(ai_settings,screen,ship)
         #监视键盘和鼠标
         for event in pygame.event.get():
             if event.type == pygame.OUIT:
