@@ -2,6 +2,7 @@ import sys
 import pygame
 from settings import Settings
 from ship import Ship
+import game_functions as gf
 def run_game():
     pygame.init()
    ai_settings = Settings()
@@ -17,6 +18,7 @@ def run_game():
     #开始游戏的主循环
 
     while True:
+        gf.check_events()
         #监视键盘和鼠标
         for event in pygame.event.get():
             if event.type == pygame.OUIT:
